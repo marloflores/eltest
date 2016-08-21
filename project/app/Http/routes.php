@@ -1,4 +1,4 @@
-<?php
+<?php Route::get('/', 'WelcomeController@index');
 
 /*
 |--------------------------------------------------------------------------
@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('publishers/list', 'PublisherController@index');
+Route::get('publishers/{id}', 'PublisherController@show');
 
-Route::get('home', 'HomeController@index');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('authors/list', 'AuthorController@index');
+Route::get('authors/{id}', 'AuthorController@show');
+
+
+Route::get('books/highlighted', 'BookController@index');
+Route::get('books/{id}', 'BookController@show');
+Route::get('books/search/{keyword}/{offset?}/{limit?}', 'BookController@search');

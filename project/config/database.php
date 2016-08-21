@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'sqlite',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -48,7 +48,13 @@ return [
 
 		'sqlite' => [
 			'driver'   => 'sqlite',
-			'database' => storage_path().'/database.sqlite',
+			'database' => storage_path().'/elastique.sqlite',
+			'prefix'   => '',
+		],
+
+		'sqlite_testing' => [
+			'driver'   => 'sqlite',
+			'database' => storage_path().'/testdata/testdb.sqlite',
 			'prefix'   => '',
 		],
 
