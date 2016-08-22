@@ -20,6 +20,13 @@ class BookRepository extends BaseRepository
         return $this->object->with('author', 'publisher')->findOrFail($id);
     }
 
+    /**
+     * The search keyword function
+     * @param $keyword search term
+     * @param int $offset skip number of items
+     * @param int $limit maximum number
+     * @return mixed
+     */
     public function search($keyword, $offset = 0, $limit = 100)
     {
         $results = $this->object->with(['author', 'publisher'])

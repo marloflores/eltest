@@ -1,0 +1,10 @@
+1. The routes and corresponding controllers that serve them are defined in project/app/Http/routes.php
+
+2. Models are located in project/app/Models
+
+3. Repositories are located in project/app/Repositories
+
+4. Database used by the application is in SQLite. The file is located in project/storage/elastique.sqlite
+
+
+Files needed to setup the VM is included. Just run "vagrant up" inside the Vagrantfile directory. Tested under Virtualbox 5.0.26 and Vagrant 1.8.5

@@ -11,6 +11,10 @@
 |
 */
 
+/*
+ * Note, the id parameter is checked in RouteServiceProvider::boot()
+ */
+
 Route::get('publishers/list', 'PublisherController@index');
 Route::get('publishers/{id}', 'PublisherController@show');
 

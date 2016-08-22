@@ -28,6 +28,9 @@ vagrantfile:
                                 vflmnfp_tye1u4tt9q0x:
                                     host: '8490'
                                     guest: '22'
+                                webserver_http:
+                                    host: '8080'
+                                    guest: '80'
                         memory: '512'
                         cpus: '1'
         provision:
